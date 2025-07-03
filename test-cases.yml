@@ -231,14 +231,14 @@
     time control = 10 min
     task = rect_area
     code =
-    > const _ = require("lodash");
-    > const R = require("rambda");
-    >
-    > const solution = (width, length) => {
-    >   return width * length;
-    > };
-    >
-    > module.exports = solution;
+    const _ = require("lodash");
+    const R = require("rambda");
+    
+    const solution = (width, length) => {
+      return width * length;
+    };
+    
+    module.exports = solution;
   steps:
     - Создать игру с заданными параметрами
     - Выбрать язык Node.js
