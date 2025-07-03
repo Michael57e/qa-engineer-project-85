@@ -98,13 +98,14 @@
     Пользователь зашел в игру в качестве зрителя
 
 - summary: | # 8
-    Пользователя соединяет с игрой, которую он выбрал
+    Пользователя соединяет с игрой, которую он выбирает
   requirement: |
-    Пользователя соединяет с игрой, которую он выбрал
+    Пользователя соединяет с конкретной игрой, которую он выбирает
   prerequisites: |
-    Пользователь авторизован на сайте. Пользователь Б создал игру
+    Пользователь авторизован на сайте.
+    Пользователи Б, В, Г создали игры
   test-data: |
-    нет
+    Fight = игра, созданная пользователем Б
   steps:
     - Нажать кнопку "Fight"
   expected-result: |
@@ -229,16 +230,15 @@
     game type = with a bot
     time control = 10 min
     task = rect_area
-
     code =
-    const _ = require("lodash");
-    const R = require("rambda");
-
-    const solution = (width, length) => {
-      return width * length;
-    };
-
-    module.exports = solution;
+    > const _ = require("lodash");
+    > const R = require("rambda");
+    >
+    > const solution = (width, length) => {
+    >   return width * length;
+    > };
+    >
+    > module.exports = solution;
   steps:
     - Создать игру с заданными параметрами
     - Выбрать язык Node.js
